@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pupil_Beta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XhC-zZ-PwI">
+                                <rect key="frame" x="16" y="20" width="568" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="CyP-dH-cIY" userLabel="MessageCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyP-dH-cIY" id="a2h-h7-uQd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7v3-ur-iiJ" userLabel="DocView">
+                                <rect key="frame" x="16" y="540" width="568" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2N-0A-3NQ">
+                                        <rect key="frame" x="20" y="15" width="443" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-WM-ock">
+                                        <rect key="frame" x="478" y="15" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Rid-oB-H5M"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5pM-lu-lG5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gu3-WM-ock" secondAttribute="trailing" constant="20" id="6eU-hx-JQX"/>
+                                    <constraint firstAttribute="height" constant="60" id="Q0g-d6-55R"/>
+                                    <constraint firstItem="Gu3-WM-ock" firstAttribute="top" secondItem="7v3-ur-iiJ" secondAttribute="top" constant="15" id="RCm-PX-F1v"/>
+                                    <constraint firstItem="Gu3-WM-ock" firstAttribute="leading" secondItem="Z2N-0A-3NQ" secondAttribute="trailing" constant="15" id="T9K-lD-WjJ"/>
+                                    <constraint firstItem="Z2N-0A-3NQ" firstAttribute="top" secondItem="7v3-ur-iiJ" secondAttribute="top" constant="15" id="dwU-La-wzU"/>
+                                    <constraint firstItem="Z2N-0A-3NQ" firstAttribute="leading" secondItem="7v3-ur-iiJ" secondAttribute="leading" constant="20" id="uyY-64-rat"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XhC-zZ-PwI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="4DT-3K-LCo"/>
+                            <constraint firstItem="7v3-ur-iiJ" firstAttribute="top" secondItem="XhC-zZ-PwI" secondAttribute="bottom" id="5hU-WC-Xw1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7v3-ur-iiJ" secondAttribute="trailing" id="PDZ-j5-UhL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7v3-ur-iiJ" secondAttribute="bottom" id="Vyf-Vd-8en"/>
+                            <constraint firstItem="7v3-ur-iiJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="YpX-vi-Rfg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XhC-zZ-PwI" secondAttribute="trailing" id="m3U-ft-HJ8"/>
+                            <constraint firstItem="XhC-zZ-PwI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="20" id="qXL-7q-SHb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="docViewHeightConstraint" destination="Q0g-d6-55R" id="hNw-8b-JMF"/>
+                        <outlet property="messageTableView" destination="XhC-zZ-PwI" id="Kjh-Om-kGt"/>
+                        <outlet property="messageTextField" destination="Z2N-0A-3NQ" id="ruT-w6-qbb"/>
+                        <outlet property="sendButton" destination="Gu3-WM-ock" id="Cs3-tm-HCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
